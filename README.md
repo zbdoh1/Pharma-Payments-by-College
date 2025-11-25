@@ -1,11 +1,11 @@
 # Pharma-Payments-by-College 
 
 **Summary of files**
-1_Cleaning_MF202508025.R: this is the original R code used to clean the original dataset.
-2_Results_ZD20251125.R: this is the final R code used for the analysis.
-3_Results_ZD20251125_Quatro.qmd: this is the same as the analysis code but in Quatro format
-ahpra_202324.xlsx: this is the 2023/24 AHPRA Specialist Workforce counts. It is required in the results code.
-payments_cleaned_updated.csv: this is the final dataset for analysis. It is required in the results code.
+- 1_Cleaning_MF202508025.R: this is the original R code used to clean the original dataset.
+- 2_Results_ZD20251125.R: this is the final R code used for the analysis.
+- 3_Results_ZD20251125_Quatro.qmd: this is the same as the analysis code but in Quatro format
+- ahpra_202324.xlsx: this is the 2023/24 AHPRA Specialist Workforce counts. It is required in the results code.
+- payments_cleaned_updated.csv: this is the final dataset for analysis. It is required in the results code.
 
 **Supplementary Methods**
 
@@ -33,4 +33,6 @@ Formal data analysis was undertaken by M.F. and Z.D. using R version 4.5.0, with
 5. ‌Australian Health Practitioner Regulation Agency - Approved programs of study [Internet]. Ahpra.gov.au. 2025 [cited 2025 Nov 19]. Available from: https://www.ahpra.gov.au/Accreditation/Approved-Programs-of-Study.aspx?ref=Medical%20Practitioner&type=Specialist&_gl=1
 
 6. ‌‌Australian Health Practitioner Regulation Agency - Annual Report 2023/24 Index of Tables - Table R9: Health practitioners with specialties. [Internet]. Ahpra.gov.au. 2025 [cited 2025 Nov 19]. Available from: https://www.ahpra.gov.au/Publications/Annual-reports/Annual-report-2024/Index-of-tables.aspx
+
+
 
