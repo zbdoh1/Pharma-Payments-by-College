@@ -319,6 +319,16 @@ r9 <- read_excel(
   ) %>%
   filter(!is.na(PROF_UP), !is.na(Total.2023.24))
 
+#Merge haem/onc
+r9 <- r9 %>%
+  mutate(PROF_UP = case_when(
+    PROF_UP %in% c("HAEMATOLOGY", "MEDICAL ONCOLOGY") ~ "HAEMATOLOGY AND ONCOLOGY",
+    TRUE ~ PROF_UP)) %>%
+   group_by(PROF_UP) %>%
+   summarise(across(where(is.numeric), sum)) %>%
+   ungroup()
+  
+
 # Numerators: unique doctors with ≥1 payment
 numerators <- payments_doctor %>%
   semi_join(r9, by = c("specialty" = "PROF_UP")) %>%
@@ -561,5 +571,6 @@ final_viz <- p_left_updated + p_right_updated +
 final_viz
 
 R.version
+
 
 
