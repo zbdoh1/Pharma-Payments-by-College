@@ -41,10 +41,6 @@ payments <- read_csv("payments_cleaned_updated.csv")
 
 # --- INDIVIDUAL DOCTOR CLEANING ----------------------------------------------
 
-# Remove one non-doctor
-payments <- payments %>%
-  filter(name != "Jones, Karen")
-
 # Nuclear medicine recodes (overlapping specialties by college)
 nuc_med <- payments %>%
   filter(specialty == "NUCLEAR MEDICINE") %>%
@@ -196,6 +192,7 @@ payments <- payments %>%
       name == "Moore, Melissa"     & profession == "Nurses"      ~ "Medical Professions",
       name == "Wang, Ying"         & profession == "Nurses"      ~ "Medical Professions",
       name == "Nguyen, Yvonne"     & profession == "Pharmacists" ~ "Medical Professions",
+      name == "Jones, Karen"      & profession == "Medical Professionals" ~ "Other",
       TRUE ~ profession
     )
   )
@@ -563,3 +560,4 @@ final_viz <- p_left_updated + p_right_updated +
 final_viz
 
 R.version
+
